@@ -81,7 +81,7 @@ export default function LoginPage() {
         </form>
         
         <Typography variant="caption" color="#1e3a8a" display="block" mt={2} align="center">
-          Credenciales de prueba: admin / admin123
+          Credenciales: benhacker_admin@cuentas / BenH@cker2026Adm!nProd
         </Typography>
       </Paper>
     </Box>
