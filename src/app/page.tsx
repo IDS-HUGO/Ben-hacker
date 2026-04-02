@@ -146,28 +146,3 @@ export default function Home() {
     </Box>
   );
 }
-          variant="contained"
-          color="primary"
-          startIcon={<LoginIcon />}
-          component={Link}
-          href="/login"
-          sx={{ borderRadius: 3, fontWeight: 700, bgcolor: "#003366" }}
-        >
-          Login Administrador
-        </Button>
-        <Button
-          variant="outlined"
-          color="error"
-          href="https://wa.me/521234567890?text=Hola,%20quiero%20más%20información%20de%20Cuentas%20Ben-Hacker"
-          target="_blank"
-          sx={{ borderRadius: 3, fontWeight: 700, borderColor: "#c1121f", color: "#c1121f" }}
-        >
-          Contacto WhatsApp
-        </Button>
-      </Box>
-      <Typography variant="caption" color="#1e3a8a" mb={2}>
-        © {new Date().getFullYear()} Cuentas Ben-Hacker. Todos los derechos reservados.
-      </Typography>
-    </Box>
-  );
-}
