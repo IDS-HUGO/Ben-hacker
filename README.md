@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cuentas Ben-Hacker
 
-## Getting Started
+Sistema monolítico para venta de cuentas de streaming con panel administrativo, control de clientes y garantía de servicio.
 
-First, run the development server:
+## 🎨 Características
+
+### Landing Page Pública
+- Visualización de productos/cuentas disponibles
+- Botón de contacto por WhatsApp
+- Información de garantía y servicio
+- Diseño Material You con paleta azul rey, rojo y azul marino
+
+### Panel Administrador (con login)
+- Registro y gestión de productos/cuentas
+- CRUD completo de productos
+- Registro de clientes con datos (nombre, teléfono, estado de pagos)
+- Visualización de clientes en tabla
+- Subida de imágenes a Cloudinary
+- Autenticación de usuario
+
+## 🚀 Stack Tecnológico
+
+- **Frontend:** Next.js 14, React, TypeScript, Material-UI (MUI)
+- **Backend:** Express, TypeScript
+- **Base de Datos:** SQLite con Prisma ORM
+- **Storage de Imágenes:** Cloudinary
+- **Deployment:** Vercel (frontend) + Node.js (backend)
+
+## 📋 Requisitos Previos
+
+- Node.js 18+
+- npm o yarn
+
+## 🔧 Instalación y Configuración
+
+### Frontend
 
 ```bash
+cd front
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El frontend estará disponible en `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Backend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd back
+npm install
+npm run build
+npm run dev
+```
 
-## Learn More
+El backend estará disponible en `http://localhost:3001`
 
-To learn more about Next.js, take a look at the following resources:
+### Base de Datos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para inicializar la base de datos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cd back
+npx prisma migrate dev --name init
+npx prisma db seed
+```
 
-## Deploy on Vercel
+## 👤 Credenciales de Prueba
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Usuario Admin:**
+- Usuario: `admin`
+- Contraseña: `admin123`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Despliegue
+
+### Frontend en Vercel
+1. Conecta tu repositorio GitHub a Vercel
+2. Deploy automático al hacer push
+
+### Backend
+El backend necesita un servidor Node.js con soporte para:
+```bash
+npm run build
+npm start
+```
+
+## 🌐 API Endpoints
+
+- `GET /api/productos` - Listar productos
+- `POST /api/productos` - Crear producto
+- `PUT /api/productos/:id` - Actualizar producto
+- `DELETE /api/productos/:id` - Eliminar producto
+- `GET /api/clientes` - Listar clientes
+- `POST /api/clientes` - Agregar cliente
+- `POST /api/auth/login` - Login admin
+
+## 📄 Licencia
+
+Proyecto privado para Cuentas Ben-Hacker 2026
