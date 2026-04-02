@@ -146,33 +146,6 @@ export default function Home() {
     </Box>
   );
 }
-            <Card sx={{ borderRadius: 4, boxShadow: 3, border: `2px solid ${p.color}` }}>
-              <CardContent>
-                <Typography variant="h6" fontWeight={700} color={p.color} gutterBottom>
-                  {p.nombre}
-                </Typography>
-                <Typography variant="body1" mb={1}>{p.descripcion}</Typography>
-                <Chip label={`Garantía: ${p.garantia}`} color="primary" sx={{ bgcolor: p.color, color: '#fff', mb: 1 }} />
-                <Typography variant="body2" color="text.secondary">{p.servicio}</Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  variant="contained"
-                  color="success"
-                  startIcon={<WhatsAppIcon />}
-                  href="https://wa.me/521234567890?text=Hola,%20quiero%20una%20cuenta%20de%20streaming"
-                  target="_blank"
-                  sx={{ borderRadius: 3, fontWeight: 700 }}
-                >
-                  Solicitar por WhatsApp
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-      <Box display="flex" gap={2} mb={6}>
-        <Button
           variant="contained"
           color="primary"
           startIcon={<LoginIcon />}
